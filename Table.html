@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Table</title>
+	<style type="text/css">
+	h1{
+		font-style: italic;
+		font-family:Times new roman; 
+		margin-top: 10px; 
+	}	
+	body{
+		background-color: lightblue;
+	}
+	div{
+		border: 2px solid blue; 
+		padding: 20px; 
+		margin: 200px; 
+		width: 50%;
+	}
+	</style>
+</head>
+<body>
+	<center>
+		<div >
+			<h1><u>Enter the number for Table:</u></h1>  <br />
+			<input type="text" name="digit" id="digit" placeholder="Enter the number for table:">
+			<button type="submit" onclick="able()">Submit</button>
+			<p id="digit1"></p>
+		</div>
+	</center>
+
+	
+	<script type="text/javascript">
+
+		function able() {
+			var num1 = Number(document.getElementById('digit').value);
+			for(i=1;i<=10;i++)
+			{
+				var final=(num1 + "*" + i + "=" + (num1*i) + "<br />");
+				document.getElementById('digit1').innerHTML+=final;
+			}
+		}
+	</script>
+
+</body>
+</html>
